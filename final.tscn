@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfktw0d3o02r2"]
+
+[ext_resource type="FontFile" uid="uid://bjofiwiib3v7r" path="res://PixelatedEleganceRegular-ovyAA.ttf" id="1_qt6nr"]
+[ext_resource type="Texture2D" uid="uid://nu06afgexmpj" path="res://graphics/COLOR.png" id="2_7678y"]
+[ext_resource type="Texture2D" uid="uid://bwgakd1krmbf0" path="res://graphics/replay.png" id="3_7678y"]
+[ext_resource type="Script" uid="uid://bkmuggk4llnob" path="res://REPLAY.gd" id="3_fp1em"]
+[ext_resource type="AudioStream" uid="uid://c5s33ekgvlrtr" path="res://graphics/click.wav" id="5_fp1em"]
+
+[node name="Node" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 646.0
+scale = Vector2(1, 0.98915225)
+color = Color(0.25334132, 1.7988868e-06, 0.16686282, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+z_index = 2
+layout_mode = 0
+offset_left = 371.0
+offset_top = 82.89927
+offset_right = 878.0
+offset_bottom = 132.89926
+scale = Vector2(0.99036795, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qt6nr")
+theme_override_font_sizes/font_size = 55
+text = "YOU DID IT!"
+
+[node name="Color" type="Sprite2D" parent="ColorRect"]
+position = Vector2(564, 104.00001)
+scale = Vector2(2.0910447, 0.79333335)
+texture = ExtResource("2_7678y")
+
+[node name="Color2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(571, 394)
+scale = Vector2(2.8432837, 2.8133333)
+texture = ExtResource("2_7678y")
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 193.09464
+offset_right = 1029.0
+offset_bottom = 686.0946
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qt6nr")
+theme_override_font_sizes/font_size = 25
+text = " “…sealed us away… so their children may sleep without fear.
+ The water protects them, but it drowns us.
+ We stole from the sea god… our sons would pay until the tide ran red.
+ By blood and tide, the oath was broken. He bound us in silence.
+ This is no prophecy. This is punishment. The god of the sea chained your fate in fog and water. Sacrifice, or drown in his silence.”
+
+After fishing and sailing beyond their boundaries, the village was cursed by Poseiden to be punished accordingly and taught a lesson."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 835.0
+offset_top = 526.0
+offset_right = 1995.0
+offset_bottom = 927.0
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("3_7678y")
+flat = true
+script = ExtResource("3_fp1em")
+
+[node name="button_sound" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("5_fp1em")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

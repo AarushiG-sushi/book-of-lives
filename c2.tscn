@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://bntn0ukrhj863"]
+
+[ext_resource type="Texture2D" uid="uid://djmjesm5xc2yu" path="res://graphics/exit.png" id="1_k7ioa"]
+[ext_resource type="Script" uid="uid://dqtmxs0y5wjk8" path="res://buttonexit.gd" id="2_6quwv"]
+[ext_resource type="AudioStream" uid="uid://c5s33ekgvlrtr" path="res://graphics/click.wav" id="3_6quwv"]
+[ext_resource type="FontFile" uid="uid://bjofiwiib3v7r" path="res://PixelatedEleganceRegular-ovyAA.ttf" id="3_7bpqh"]
+
+[node name="Node" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 653.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.044982698
+anchor_top = 0.099540584
+anchor_right = 0.044982698
+anchor_bottom = 0.099540584
+offset_left = 349.99997
+offset_top = 376.0
+offset_right = 1532.0
+offset_bottom = 872.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("1_k7ioa")
+script = ExtResource("2_6quwv")
+metadata/_edit_use_anchors_ = true
+
+[node name="button_sound" type="AudioStreamPlayer" parent="ColorRect/Button"]
+stream = ExtResource("3_6quwv")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 73.0
+offset_top = 188.0
+offset_right = 1100.0
+offset_bottom = 377.0
+theme_override_colors/font_color = Color(0.8509804, 0.28235295, 0, 1)
+theme_override_fonts/font = ExtResource("3_7bpqh")
+theme_override_font_sizes/font_size = 50
+text = "
+
+CLUE: \"In the world of knowledge, the next book you shall seek.\""
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 71.0
+offset_top = 37.0
+offset_right = 1098.0
+offset_bottom = 322.0
+theme_override_fonts/font = ExtResource("3_7bpqh")
+theme_override_font_sizes/font_size = 50
+text = "YOU HAVE SELECTED CANDIDATE C...
+
+THAT WAS A CHILD...
+
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="ColorRect/Button" to="ColorRect/Button" method="_on_pressed"]

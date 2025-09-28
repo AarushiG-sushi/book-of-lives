@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://byekv7x1lek22"]
+
+[ext_resource type="FontFile" uid="uid://bjofiwiib3v7r" path="res://PixelatedEleganceRegular-ovyAA.ttf" id="1_whoah"]
+[ext_resource type="Texture2D" uid="uid://djmjesm5xc2yu" path="res://graphics/exit.png" id="2_m7sm5"]
+[ext_resource type="Script" uid="uid://dqtmxs0y5wjk8" path="res://buttonexit.gd" id="3_dwf6r"]
+[ext_resource type="AudioStream" uid="uid://c5s33ekgvlrtr" path="res://graphics/click.wav" id="4_dwf6r"]
+
+[node name="Node" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1182.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.26302084
+offset_left = 42.0
+offset_top = 58.0
+offset_right = 839.0
+offset_bottom = 457.0
+theme_override_fonts/font = ExtResource("1_whoah")
+theme_override_font_sizes/font_size = 50
+text = "YOU HAVE SELECTED CANDIDATE A...
+
+THAT WAS THE TOWN LEADER...
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.26302084
+offset_left = 48.0
+offset_top = 209.0
+offset_right = 845.0
+offset_bottom = 608.0
+theme_override_colors/font_color = Color(0.8509804, 0.28235295, 0, 1)
+theme_override_fonts/font = ExtResource("1_whoah")
+theme_override_font_sizes/font_size = 50
+text = "
+
+CLUE: \"Surrounded by cold stone walls, find the next book in prisoner filled halls\""
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 411.0
+offset_top = 475.0
+offset_right = 1593.0
+offset_bottom = 971.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("2_m7sm5")
+script = ExtResource("3_dwf6r")
+metadata/_edit_use_anchors_ = true
+
+[node name="button_sound" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("4_dwf6r")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,0 +1,156 @@
+[gd_scene load_steps=11 format=3 uid="uid://1w33sp6ylheb"]
+
+[ext_resource type="Texture2D" uid="uid://wu63cssxw1as" path="res://graphics/bckgbook.png" id="1_6nmft"]
+[ext_resource type="FontFile" uid="uid://bjofiwiib3v7r" path="res://PixelatedEleganceRegular-ovyAA.ttf" id="2_hpvyp"]
+[ext_resource type="Texture2D" uid="uid://4yobmd5xmpmb" path="res://graphics/lettera.png" id="3_bnht5"]
+[ext_resource type="Script" uid="uid://d0agajykmaml1" path="res://a_3.gd" id="4_rym2s"]
+[ext_resource type="AudioStream" uid="uid://c5s33ekgvlrtr" path="res://graphics/click.wav" id="5_bnht5"]
+[ext_resource type="Texture2D" uid="uid://b8aa1i3pr6ru8" path="res://graphics/letterb.png" id="5_moxmm"]
+[ext_resource type="Script" uid="uid://lcady70ji5do" path="res://b_3.gd" id="6_ubf7n"]
+[ext_resource type="Texture2D" uid="uid://bk7fxo5egrw54" path="res://graphics/letterc.png" id="7_87vpq"]
+[ext_resource type="Script" uid="uid://1uyys7x5h7ro" path="res://c_3.gd" id="8_pay7o"]
+[ext_resource type="Texture2D" uid="uid://b4n6rncs0dl4c" path="res://graphics/header.png" id="9_hpvyp"]
+
+[node name="Node" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Bckgbook" type="Sprite2D" parent="Node2D"]
+position = Vector2(577, 320)
+scale = Vector2(1.8622364, 1.5474701)
+texture = ExtResource("1_6nmft")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 158.0
+offset_top = 64.0
+offset_right = 472.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hpvyp")
+theme_override_font_sizes/font_size = 20
+text = "CHOOSE 1 TO SACRIFICE..."
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 111.0
+offset_right = 536.0
+offset_bottom = 526.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hpvyp")
+theme_override_font_sizes/font_size = 16
+text = "Candidate A 
+
+Pros:
+ - Friends with everyone
+
+Cons:
+ - Player
+ - Only eats protein
+
+
+
+"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 590.0
+offset_top = 66.0
+offset_right = 998.0
+offset_bottom = 481.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hpvyp")
+theme_override_font_sizes/font_size = 16
+text = "
+Candidate C
+
+Pros:
+ - Makes really good food
+
+
+Cons:
+  - LIkes to eat icecream with hot sauce
+
+
+"
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 119.0
+offset_top = 373.0
+offset_right = 527.0
+offset_bottom = 838.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hpvyp")
+theme_override_font_sizes/font_size = 16
+text = "Candidate B
+
+Pros:
+ - Can fly
+
+Cons:
+ - Always late to everything
+"
+autowrap_mode = 2
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 627.0
+offset_top = 341.0
+offset_right = 951.0
+offset_bottom = 364.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hpvyp")
+theme_override_font_sizes/font_size = 20
+text = "OR ELSE EVERYONE DIES..."
+
+[node name="a3" type="Button" parent="."]
+offset_left = 581.0
+offset_top = 401.0
+offset_right = 877.0
+offset_bottom = 697.0
+scale = Vector2(0.36, 0.4)
+icon = ExtResource("3_bnht5")
+flat = true
+script = ExtResource("4_rym2s")
+
+[node name="button_sound" type="AudioStreamPlayer" parent="a3"]
+stream = ExtResource("5_bnht5")
+
+[node name="b3" type="Button" parent="."]
+offset_left = 719.0
+offset_top = 409.0
+offset_right = 1000.0
+offset_bottom = 663.0
+scale = Vector2(0.36, 0.4)
+icon = ExtResource("5_moxmm")
+flat = true
+script = ExtResource("6_ubf7n")
+
+[node name="button_sound" type="AudioStreamPlayer" parent="b3"]
+stream = ExtResource("5_bnht5")
+
+[node name="c3" type="Button" parent="."]
+offset_left = 854.0
+offset_top = 402.0
+offset_right = 1153.0
+offset_bottom = 674.0
+scale = Vector2(0.36, 0.4)
+icon = ExtResource("7_87vpq")
+flat = true
+script = ExtResource("8_pay7o")
+
+[node name="button_sound" type="AudioStreamPlayer" parent="c3"]
+stream = ExtResource("5_bnht5")
+
+[node name="Header" type="Sprite2D" parent="."]
+position = Vector2(301, 307)
+scale = Vector2(0.10777778, 0.107777774)
+texture = ExtResource("9_hpvyp")
+
+[node name="Header2" type="Sprite2D" parent="."]
+position = Vector2(787.99994, 298)
+scale = Vector2(0.10777778, 0.107777774)
+texture = ExtResource("9_hpvyp")
+
+[connection signal="pressed" from="a3" to="a3" method="_on_pressed"]
+[connection signal="pressed" from="b3" to="b3" method="_on_pressed"]
+[connection signal="pressed" from="c3" to="c3" method="_on_pressed"]

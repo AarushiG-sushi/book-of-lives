@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsi4w2ka87s87"]
+
+[ext_resource type="FontFile" uid="uid://bjofiwiib3v7r" path="res://PixelatedEleganceRegular-ovyAA.ttf" id="1_hfkix"]
+[ext_resource type="Texture2D" uid="uid://djmjesm5xc2yu" path="res://graphics/exit.png" id="2_6syyc"]
+[ext_resource type="Script" uid="uid://dqtmxs0y5wjk8" path="res://buttonexit.gd" id="3_o1325"]
+
+[node name="Node" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1161.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 132.0
+offset_top = 78.0
+offset_right = 1030.0
+offset_bottom = 367.0
+theme_override_fonts/font = ExtResource("1_hfkix")
+theme_override_font_sizes/font_size = 50
+text = "THE BOOK HAS DISAPPEARED...
+
+EXPLORE THE VILLAGE TO FIND MORE CLUES"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 350.0
+offset_top = 378.0
+offset_right = 1532.0
+offset_bottom = 874.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("2_6syyc")
+script = ExtResource("3_o1325")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

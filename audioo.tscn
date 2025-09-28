@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy5xfe4fl5j50"]
+
+[ext_resource type="AudioStream" uid="uid://3fjgvc8ctakc" path="res://graphics/sunrise-114326.wav" id="1_7dbjq"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_7dbjq")
+autoplay = true

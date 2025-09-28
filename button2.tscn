@@ -1,0 +1,137 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxcnptm8g41hq"]
+
+[ext_resource type="Texture2D" uid="uid://wu63cssxw1as" path="res://graphics/bckgbook.png" id="1_2kcw0"]
+[ext_resource type="Texture2D" uid="uid://4yobmd5xmpmb" path="res://graphics/lettera.png" id="2_s1vkr"]
+[ext_resource type="Script" uid="uid://cuvtfjxc8mk70" path="res://button_a.gd" id="3_vaevd"]
+[ext_resource type="Texture2D" uid="uid://b8aa1i3pr6ru8" path="res://graphics/letterb.png" id="4_tebyr"]
+[ext_resource type="Script" uid="uid://ccsbv0tt1he5u" path="res://button_b.gd" id="5_dsjh2"]
+[ext_resource type="Texture2D" uid="uid://bk7fxo5egrw54" path="res://graphics/letterc.png" id="6_b5j73"]
+[ext_resource type="Script" uid="uid://bs4r7xs4yt66q" path="res://button_c.gd" id="7_rdqyk"]
+[ext_resource type="FontFile" uid="uid://bjofiwiib3v7r" path="res://PixelatedEleganceRegular-ovyAA.ttf" id="8_7k4hf"]
+
+[node name="Node" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Bckgbook" type="Sprite2D" parent="Node2D"]
+position = Vector2(579.49994, 321.12625)
+scale = Vector2(1.8622364, 1.5474701)
+texture = ExtResource("1_2kcw0")
+
+[node name="ButtonA" type="Button" parent="Node2D"]
+offset_left = 592.0
+offset_top = 393.0
+offset_right = 888.0
+offset_bottom = 689.0
+scale = Vector2(0.36, 0.4)
+icon = ExtResource("2_s1vkr")
+flat = true
+script = ExtResource("3_vaevd")
+
+[node name="ButtonB" type="Button" parent="Node2D"]
+offset_left = 726.0
+offset_top = 402.0
+offset_right = 1007.0
+offset_bottom = 656.0
+scale = Vector2(0.36, 0.4)
+icon = ExtResource("4_tebyr")
+flat = true
+script = ExtResource("5_dsjh2")
+
+[node name="ButtonC" type="Button" parent="Node2D"]
+offset_left = 860.0
+offset_top = 398.0
+offset_right = 1159.0
+offset_bottom = 670.0
+scale = Vector2(0.36, 0.4)
+icon = ExtResource("6_b5j73")
+flat = true
+script = ExtResource("7_rdqyk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 158.0
+offset_top = 64.0
+offset_right = 472.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_7k4hf")
+theme_override_font_sizes/font_size = 20
+text = "CHOOSE 1 TO SACRIFICE..."
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 124.0
+offset_top = 101.0
+offset_right = 532.0
+offset_bottom = 516.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_7k4hf")
+theme_override_font_sizes/font_size = 16
+text = "Candidate A 
+Pros:
+ - Nerd; knows every capital of every country
+ - Unofficial forensic scientist
+ - Just really smart
+
+
+Cons:
+ - Stays up all night
+ - Knows literally everyone’s business
+"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 129.0
+offset_top = 333.0
+offset_right = 537.0
+offset_bottom = 748.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_7k4hf")
+theme_override_font_sizes/font_size = 16
+text = "Candidate B
+Pros:
+ - Buff.
+ - Can make quick decisions
+ - Spiritually active
+
+Cons:
+ - Has anger management issues
+ - Inflated Ego
+ - Has daddy issues.
+"
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 593.0
+offset_top = 81.0
+offset_right = 1001.0
+offset_bottom = 546.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_7k4hf")
+theme_override_font_sizes/font_size = 16
+text = "Candidate C
+Pros:
+ - Purer than water from a mountain stream.
+ - Disney princess eyes.
+ - Sweeter than molasses.
+
+
+Cons:
+ - Sounds like a hyena
+ - Can't keep her mouth shut
+ - Thinks that the Earth is flat
+"
+autowrap_mode = 2
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 627.0
+offset_top = 341.0
+offset_right = 951.0
+offset_bottom = 364.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_7k4hf")
+theme_override_font_sizes/font_size = 20
+text = "OR ELSE EVERYONE DIES..."
+
+[connection signal="pressed" from="Node2D/ButtonA" to="Node2D/ButtonA" method="_on_pressed"]
+[connection signal="pressed" from="Node2D/ButtonB" to="Node2D/ButtonB" method="_on_pressed"]
+[connection signal="pressed" from="Node2D/ButtonC" to="Node2D/ButtonC" method="_on_pressed"]

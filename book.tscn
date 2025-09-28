@@ -1,0 +1,187 @@
+[gd_scene load_steps=11 format=3 uid="uid://bbtnvucvh5gkm"]
+
+[ext_resource type="Texture2D" uid="uid://wu63cssxw1as" path="res://graphics/bckgbook.png" id="1_kh36y"]
+[ext_resource type="FontFile" uid="uid://bjofiwiib3v7r" path="res://PixelatedEleganceRegular-ovyAA.ttf" id="2_y0hms"]
+[ext_resource type="Texture2D" uid="uid://4yobmd5xmpmb" path="res://graphics/lettera.png" id="3_f0xhj"]
+[ext_resource type="Script" uid="uid://bmgfym0ckkpvh" path="res://buttona.gd" id="4_3r6c0"]
+[ext_resource type="AudioStream" uid="uid://c5s33ekgvlrtr" path="res://graphics/click.wav" id="5_tt8fr"]
+[ext_resource type="Texture2D" uid="uid://b8aa1i3pr6ru8" path="res://graphics/letterb.png" id="5_xeei7"]
+[ext_resource type="Script" uid="uid://ksqa17rslv6r" path="res://buttonb.gd" id="6_xeei7"]
+[ext_resource type="Texture2D" uid="uid://bk7fxo5egrw54" path="res://graphics/letterc.png" id="7_7wrkw"]
+[ext_resource type="Script" uid="uid://cquj28ysownn3" path="res://buttonc.gd" id="8_gw1ob"]
+[ext_resource type="Texture2D" uid="uid://b4n6rncs0dl4c" path="res://graphics/header.png" id="9_gw1ob"]
+
+[node name="Node" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Bckgbook" type="Sprite2D" parent="."]
+position = Vector2(579.49994, 321.12625)
+scale = Vector2(1.8622364, 1.5474701)
+texture = ExtResource("1_kh36y")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 159.0
+offset_top = 64.0
+offset_right = 473.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y0hms")
+theme_override_font_sizes/font_size = 20
+text = "CHOOSE 1 TO SACRIFICE..."
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 362.0
+offset_right = 543.0
+offset_bottom = 989.0
+theme_override_colors/font_color = Color(0.42745098, 0.050980393, 0.3019608, 1)
+theme_override_fonts/font = ExtResource("2_y0hms")
+theme_override_font_sizes/font_size = 16
+text = "Candidate B 
+"
+autowrap_mode = 2
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 362.0
+offset_right = 543.0
+offset_bottom = 989.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y0hms")
+theme_override_font_sizes/font_size = 16
+text = "
+
+Pros:
+ - Can hit the whistle note
+
+Cons:
+ - Can’t do physics
+"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 126.0
+offset_top = 114.0
+offset_right = 543.0
+offset_bottom = 741.0
+theme_override_colors/font_color = Color(0.42745098, 0.050980393, 0.3019608, 1)
+theme_override_fonts/font = ExtResource("2_y0hms")
+theme_override_font_sizes/font_size = 16
+text = "Candidate A
+
+"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 28.0
+offset_right = 421.0
+offset_bottom = 655.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y0hms")
+theme_override_font_sizes/font_size = 16
+text = "Pros:
+ - Has a nice wig
+
+
+Cons:
+ - Copies Legally Blonde script for speeches
+
+"
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 610.0
+offset_top = 86.0
+offset_right = 1029.0
+offset_bottom = 713.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y0hms")
+theme_override_font_sizes/font_size = 16
+text = "
+
+Pros:
+ - Has better rizz than you
+
+Cons:
+ - Looks like an archaeopteryx
+
+"
+autowrap_mode = 2
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 605.0
+offset_top = 94.0
+offset_right = 1024.0
+offset_bottom = 721.0
+theme_override_colors/font_color = Color(0.42745098, 0.050980393, 0.3019608, 1)
+theme_override_fonts/font = ExtResource("2_y0hms")
+theme_override_font_sizes/font_size = 16
+text = "Candidate C 
+"
+autowrap_mode = 2
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 628.0
+offset_top = 361.0
+offset_right = 952.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y0hms")
+theme_override_font_sizes/font_size = 20
+text = "OR ELSE EVERYONE DIES..."
+
+[node name="ButtonA" type="Button" parent="."]
+offset_left = 601.0
+offset_top = 413.0
+offset_right = 897.0
+offset_bottom = 709.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("3_f0xhj")
+flat = true
+script = ExtResource("4_3r6c0")
+
+[node name="button_sound" type="AudioStreamPlayer" parent="ButtonA"]
+stream = ExtResource("5_tt8fr")
+
+[node name="ButtonB" type="Button" parent="."]
+offset_left = 739.0
+offset_top = 419.0
+offset_right = 1020.0
+offset_bottom = 673.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("5_xeei7")
+flat = true
+script = ExtResource("6_xeei7")
+
+[node name="button_sound" type="AudioStreamPlayer" parent="ButtonB"]
+stream = ExtResource("5_tt8fr")
+
+[node name="ButtonC" type="Button" parent="."]
+offset_left = 876.0
+offset_top = 417.00003
+offset_right = 1175.0
+offset_bottom = 689.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("7_7wrkw")
+flat = true
+script = ExtResource("8_gw1ob")
+
+[node name="button_sound" type="AudioStreamPlayer" parent="ButtonC"]
+stream = ExtResource("5_tt8fr")
+
+[node name="Header" type="Sprite2D" parent="."]
+position = Vector2(301, 307)
+scale = Vector2(0.10777778, 0.107777774)
+texture = ExtResource("9_gw1ob")
+
+[node name="Header2" type="Sprite2D" parent="."]
+position = Vector2(788.99994, 298)
+scale = Vector2(0.10777778, 0.107777774)
+texture = ExtResource("9_gw1ob")
+
+[connection signal="pressed" from="ButtonA" to="ButtonA" method="_on_pressed"]
+[connection signal="pressed" from="ButtonB" to="ButtonB" method="_on_pressed"]
+[connection signal="pressed" from="ButtonC" to="ButtonC" method="_on_pressed"]
